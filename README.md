@@ -45,3 +45,9 @@ The `ElementUtil.java` class is a core component of this framework, providing a 
 - **Stale Element Handling:** Includes mechanisms to gracefully handle `StaleElementReferenceException` by re-locating the element if the page structure changes.  
 
 - **Robustness against Pop-ups and Alerts:** Includes helper methods to handle pop-up windows and browser alerts, ensuring smooth test execution.  
+
+- **Project Structure:**
+- <img width="235" height="279" alt="image" src="https://github.com/user-attachments/assets/49dca5cb-0d39-4ad7-8751-c7b4a35151ef" />
+ 
+
+
