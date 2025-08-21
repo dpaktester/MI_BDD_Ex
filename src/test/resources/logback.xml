@@ -1,0 +1,17 @@
+<configuration>
+    <!-- Silence Apache FontBox debug logs -->
+    <logger name="org.apache.fontbox" level="WARN" />
+    <logger name="org.apache.pdfbox" level="WARN" />
+
+    <!-- Default root logger -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <!-- Console appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+</configuration>

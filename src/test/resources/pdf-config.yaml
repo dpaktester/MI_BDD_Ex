@@ -1,0 +1,62 @@
+passColor: "05a167"
+failColor: "#ff0000"
+skipColor: "a89132"
+displayFeature: true
+displayScenario: true
+displayDetailed: true
+displayExpanded: true
+
+dashboardConfig:
+  title: "Automation PDF Report"
+  titleColor: "#000000"
+  dateColor: "#000000"
+  timeColor: "#000000"
+  dataBackgroundColor: "#4F0CC8"
+  dial:
+    featureRanges: "60 95"
+    scenarioRanges: "70 90"
+    stepRanges: "75 85"
+    badColor: "#f768a1"
+    averageColor: "#93ffff"
+    goodColor: "#32ecab"
+
+summaryConfig:
+  totalColor: "#000000"
+  durationColor: "#000000"
+
+featureConfig:
+  totalColor: "#000000"
+  durationColor: "#000000"
+
+scenarioConfig:
+  totalColor: "#000000"
+  durationColor: "#000000"
+
+detailedFeatureConfig:
+  featureNameColor: "#000000"
+  startEndTimeColor: "#000000"
+  tagColor: "#404040"
+  dataHeaderColor: "#000000"
+  dataBackgroundColor: "#404040"
+  totalColor: "#000000"
+  durationColor: "#000000"
+  durationBackgroundColor: "#404040"
+
+detailedScenarioConfig:
+  featureNameColor: "#000000"
+  scenarioNameColor: "#000000"
+  startEndTimeColor: "#000000"
+  tagColor: "#404040"
+  dataHeaderColor: "#000000"
+  dataBackgroundColor: "#404040"
+  totalColor: "#000000"
+  durationColor: "#000000"
+  durationBackgroundColor: "#404040"
+  stepChartBarColor: "#7f32a8"
+
+detailedStepHookConfig:
+  stepTextColor: "#000000"
+  hookTextColor: "#000000"
+  durationColor: "#000000"
+  errorMsgColor: "#000000"
+  logMsgColor: "#000000"

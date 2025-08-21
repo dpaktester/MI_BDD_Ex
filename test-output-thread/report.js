@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"f6a69353-305c-417a-95a0-7b243e8d40cc","feature":"Access Playground section on WishInfinite website","scenario":"Verify Playground section is visible","start":1755799925583,"group":1,"content":"","tags":"@smoketest,","end":1755799937309,"className":"passed"},{"id":"13ca88d9-faf8-43a6-90d9-9ed2844aeba5","feature":"Access Playground section on WishInfinite website","scenario":"Verify user enters text to the input Box","start":1755799937318,"group":1,"content":"","tags":"@smoketest,","end":1755799943968,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[#1,main,5,main]"}]);
+});

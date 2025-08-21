@@ -1,0 +1,1963 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>AUTOMATION REPORT</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c952cc003431b643d7a73337421ff42b75bac784/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Automation Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Feb 1, 2022 06:47:42 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Feb 1, 2022 06:47:42 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Feb 1, 2022 07:02:33 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>6</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>217</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"ENS HOME Page Smoke Testing Features":888.088
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@ENSAffiliationSmokeTest</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ENSContractManagementSmokeTest</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@RateManagementSmoke</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@AffiliationPharmTerm</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@BBCreation</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@RateManagamentPharmacyListCreation</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@CNPCreation</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ENSSmokeTest</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@AffiliationPharmAdd</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>build</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Automation Report (BDD)</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Deepak Kumar Mahapatra</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+<tr>
+<td>AppName</td>
+<td>PSM/ENS</td>
+</tr>
+<tr>
+<td>version</td>
+<td>8.1</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 6,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 217,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@ENSAffiliationSmokeTest</a><a class="dropdown-item" href="#">@ENSContractManagementSmokeTest</a><a class="dropdown-item" href="#">@RateManagementSmoke</a><a class="dropdown-item" href="#">@AffiliationPharmTerm</a><a class="dropdown-item" href="#">@BBCreation</a><a class="dropdown-item" href="#">@RateManagamentPharmacyListCreation</a><a class="dropdown-item" href="#">@CNPCreation</a><a class="dropdown-item" href="#">@ENSSmokeTest</a><a class="dropdown-item" href="#">@AffiliationPharmAdd</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ENS HOME Page Smoke Testing Features</p>
+            <p class="text-sm">
+              <span>18:47:45 PM</span> / <span>00:14:48:088</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">ENS HOME Page Smoke Testing Features</h5>
+<span class='badge badge-success'>02.01.2022 18:47:45</span>
+<span class='badge badge-danger'>02.01.2022 19:02:33</span>
+<span class='badge badge-default'>00:14:48:088</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"> I want to use this template for my feature file</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Visibility of All Modules under ENS and Pharm Add in Affiliation</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_url_of_ens_home()">
+                <span>Given user Enters URL of ENS Home</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_username()">
+                <span>When user enters username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enetrs_password()">
+                <span>And user enetrs password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_should_see_as_page_header_for_ens(java.lang.String)">
+                <span>Then user should see "ENS - QA-CP5" as page header for ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_gets_the_fields_of_home_page_in_ens()">
+                <span>And user gets the fields of Home Page in ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_is_on_affliation_page_of_ens()">
+                <span>Given user is on Affliation page of ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_affiliation_management_module_button()">
+                <span>When user should click on affiliation management module button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_get_the_fields_of_affiliation_management(io.cucumber.datatable.DataTable)">
+                <span>Then user should get the fields of Affiliation management</span>
+      <div><table class='markup-table table '><tr><td>Queues</td></tr><tr><td>Maintenance</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_Queues_of_Affiliation_management()">
+                <span>And user clicks on Queues of Affiliation management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_get_the_fields_under_queues_of_affiliation_management(io.cucumber.datatable.DataTable)">
+                <span>And user should get the fields under Queues of affiliation management</span>
+      <div><table class='markup-table table '><tr><td>My Tasks</td></tr><tr><td>PNA Review</td></tr><tr><td>PNA Outreach</td></tr><tr><td>Credentialing</td></tr><tr><td>Credentialing Outreach</td></tr><tr><td>On Hold</td></tr><tr><td>Configuration</td></tr><tr><td>Configuration QC</td></tr><tr><td>Configuration QC Fix</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_Maintenance_of_Affiliation_management()">
+                <span>And user clicks on Maintenance of Affiliation management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_get_the_fields_under_maintenance_of_affiliation_management(io.cucumber.datatable.DataTable)">
+                <span>And user should get the fields under maintenance of affiliation management</span>
+      <div><table class='markup-table table '><tr><td>Submit Affiliation Request</td></tr><tr><td>Manage PCO Information</td></tr><tr><td>Manage Pharmacy Group</td></tr><tr><td>Manage Payment Center</td></tr><tr><td>Search Change Request</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_submit_affiliation_request_in_afiliation()">
+                <span>When user clicks on Submit Affiliation Request in Afiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clisk_on_manual_entry()">
+                <span>Then user clisk on Manual Entry</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_add_request_item()">
+                <span>And user clicks on Add Request Item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_selects_the_request_type_as_pharm_add_in_affiliation()">
+                <span>And user selects the request Type as Pharm Add in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_eneters_in_ncpdp_number_in_affiliation(java.lang.Integer)">
+                <span>And user eneters 240 in NCPDP Number in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_enters_as_ncpdp_chain_code_in_affiliation(java.lang.String)">
+                <span>And user enters "ENSTESTPG" as NCPDP Chain Code in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_enter_as_payment_center_number_in_affiliation(java.lang.Integer)">
+                <span>And user enter 397421 as payment center Number in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_add_entry_button_inside_affiliation()">
+                <span>And user clicks on Add Entry button inside Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_submit_request_button_in_affiliation()">
+                <span>And user clicks on Submit Request button in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_cliks_on_ok_in_the_alert_after_submiting_the_form()">
+                <span>And user cliks on OK in the alert after submiting the form</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_closes_the_message_by_clicking_upon_close_in_affiliation()">
+                <span>And user closes the message by clicking upon close in affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_pna_review_in_affiliation()">
+                <span>Then user clicks on PNA Review in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.clicks_on_the_pencil_icon_of_the_created_pharm_add_affiliation_request()">
+                <span>And clicks on the Pencil icon of the created pharm add affiliation request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_send_to_configuration_button_inside_affiliation()">
+                <span>And user clicks on Send to Configuration button inside affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clcks_on_on_hold_of_affiliation_management()">
+                <span>And user clcks on OnHold of affiliation management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_the_selection_box_of_the_created_pharm_add_affiliation_request()">
+                <span>And user clicks on the selection box of the created pharm add affiliation request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_group_and_move_to_configuration_qc_inside_affiliation_for_the_created_pharm_add_request()">
+                <span>And user clicks on Group and Move to Configuration QC inside affiliation for the created pharm add request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_enters_the_message_to_the_descripion_box_after_grp_and_config_button_in_affiliation()">
+                <span>And user enters the message to the Descripion Box after grp and config button in affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_ok_button_in_the_description_box_of_affiliation_managament()">
+                <span>And user clicks on OK button in the description box of affiliation managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_twice_on_configuration_button_to_disapper_the_project()">
+                <span>And user clicks twice on Configuration button to disapper the project</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_configuration_qc_in_affiliation_management()">
+                <span>And user clicks on Configuration QC in Affiliation management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_the_pencil_icon_of_th_ecreated_pharm_add_affiliation_request()">
+                <span>And user clicks on the pencil icon of the created pharm add affiliation request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_selects_the_created_phar_add_project_in_affiliation_management()">
+                <span>And user selects the created phar add project in Affiliation Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_withdraw_project_button_inside_configuration_qc_of_affiliation_management()">
+                <span>And user clicks on withdraw project button inside Configuration QC of Affiliation Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_selects_the_reason_of_pharm_add_withdrawal_project_in_affiliaton_management()">
+                <span>And user selects the reason of pharm add withdrawal project in affiliaton management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_enters_the_withdrawal_comment_inside_the_comment_box_in_affiliation_management()">
+                <span>And user enters the withdrawal comment inside the comment box in Affiliation Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_ok_button_to_withdraw_pharm_add_project_in_affiliation_management_project()">
+                <span>And user clicks on OK button to withdraw pharm add project in Affiliation Management project</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="48"><span class="badge log pass-bg mr-2">Pass</span>Pharm Term in Affiliation</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_url_of_ens_home()">
+                <span>Given user Enters URL of ENS Home</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_username()">
+                <span>When user enters username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enetrs_password()">
+                <span>And user enetrs password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_should_see_as_page_header_for_ens(java.lang.String)">
+                <span>Then user should see "ENS - QA-CP5" as page header for ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_gets_the_fields_of_home_page_in_ens()">
+                <span>And user gets the fields of Home Page in ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_affiliation_management_module_button()">
+                <span>When user should click on affiliation management module button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_Queues_of_Affiliation_management()">
+                <span>Then user clicks on Queues of Affiliation management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_Maintenance_of_Affiliation_management()">
+                <span>And user clicks on Maintenance of Affiliation management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_submit_affiliation_request_in_afiliation()">
+                <span>When user clicks on Submit Affiliation Request in Afiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clisk_on_manual_entry()">
+                <span>Then user clisk on Manual Entry</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_add_request_item()">
+                <span>And user clicks on Add Request Item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_selects_the_request_Type_as_Pharm_Term_in_Affiliation()">
+                <span>And user selects the request Type as Pharm Term in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_the_term_reason()">
+                <span>And user should select the term reason</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_eneters_in_ncpdp_number_field_in_affiliation(java.lang.Integer)">
+                <span>And user eneters 246 in NCPDP Number field in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_enters_as_ncpdp_chain_code_in_affiliation(java.lang.String)">
+                <span>And user enters "ENSTESTPG" as NCPDP Chain Code in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_add_entry_button_inside_affiliation()">
+                <span>And user clicks on Add Entry button inside Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_submit_request_button_in_affiliation()">
+                <span>And user clicks on Submit Request button in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_cliks_on_ok_in_the_alert_after_submiting_the_form()">
+                <span>And user cliks on OK in the alert after submiting the form</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_closes_the_message_by_clicking_upon_close_in_affiliation()">
+                <span>And user closes the message by clicking upon close in affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_pna_review_in_affiliation()">
+                <span>Then user clicks on PNA Review in Affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.clicks_on_the_Pencil_icon_of_the_created_pharm_term_affiliation_request()">
+                <span>And clicks on the Pencil icon of the created pharm term affiliation request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_Send_to_Configuration_button_inside_affiliation_for_pharmacy_Term()">
+                <span>And user clicks on Send to Configuration button inside affiliation for pharmacy Term</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clcks_on_on_hold_of_affiliation_management()">
+                <span>And user clcks on OnHold of affiliation management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.clicks_on_the_selection_box_of_the_created_pharm_term_affiliation_request()">
+                <span>And user clicks on the selection box of the created pharm term affiliation request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_group_and_move_to_configuration_qc_inside_affiliation_for_the_created_pharm_add_request()">
+                <span>And user clicks on Group and Move to Configuration QC inside affiliation for the created pharm add request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_enters_the_message_to_the_descripion_box_after_grp_and_config_button_in_affiliation()">
+                <span>And user enters the message to the Descripion Box after grp and config button in affiliation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_ok_button_in_the_description_box_of_affiliation_managament()">
+                <span>And user clicks on OK button in the description box of affiliation managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_twice_on_configuration_button_to_disapper_the_project()">
+                <span>And user clicks twice on Configuration button to disapper the project</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_configuration_qc_in_affiliation_management()">
+                <span>And user clicks on Configuration QC in Affiliation management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_the_pencil_icon_of_th_ecreated_pharm_add_affiliation_request()">
+                <span>And user clicks on the pencil icon of the created pharm add affiliation request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_selects_the_created_pha_terms_project_in_Affiliation_Management()">
+                <span>And user selects the created pha term project in Affiliation Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_withdraw_project_button_inside_configuration_qc_of_affiliation_management()">
+                <span>And user clicks on withdraw project button inside Configuration QC of Affiliation Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_selects_the_reason_of_pharm_add_withdrawal_project_in_affiliaton_management()">
+                <span>And user selects the reason of pharm add withdrawal project in affiliaton management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_enters_the_withdrawal_comment_inside_the_comment_box_in_affiliation_management()">
+                <span>And user enters the withdrawal comment inside the comment box in Affiliation Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_ok_button_to_withdraw_pharm_add_project_in_affiliation_management_project()">
+                <span>And user clicks on OK button to withdraw pharm add project in Affiliation Management project</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="90"><span class="badge log pass-bg mr-2">Pass</span>Availability of All Modules under Contract Management and project creation in Contract Management</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_url_of_ens_home()">
+                <span>Given user Enters URL of ENS Home</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_username()">
+                <span>When user enters username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enetrs_password()">
+                <span>And user enetrs password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_contract_management_button()">
+                <span>Given user clicks on contract management button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_get_the_fields_of_contract_management(io.cucumber.datatable.DataTable)">
+                <span>Then user should get the fields of contract management</span>
+      <div><table class='markup-table table '><tr><td>Queues</td></tr><tr><td>Maintenance</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_queues_of_contract_management()">
+                <span>When user clicks on Queues of Contract Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_My_Tasks_of_Contract_management_under_Queues()">
+                <span>Then user should click on My Tasks of Contract management under Queues</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_see_the_header_as_My_Tasks_Contract(java.lang.String)">
+                <span>And user should see "My Tasks Contract" as the header of Contract management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_verify_fields_under_Queues_of_contract_managemet(io.cucumber.datatable.DataTable)">
+                <span>And user should verify fields under Queues of contract managemet</span>
+      <div><table class='markup-table table '><tr><td>My Tasks</td></tr><tr><td>Contract Analyst</td></tr><tr><td>Contract QA</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_Manintenance_of_Contract_management()">
+                <span>Then user should click on Manintenance of Contract management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_verify_the_fields_under_Maintenance_of_Contract_management(io.cucumber.datatable.DataTable)">
+                <span>Then user should verify the fields under Maintenance of Contract management</span>
+      <div><table class='markup-table table '><tr><td>Manage Client Contract</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_client_contract()">
+                <span>When user clicks on Client Contract</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_sees_the_header_of_client_contract_as(java.lang.String)">
+                <span>Then user sees the Title of client contract as "ContractManagementWebapp"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_Hq_List_Code_from_dropdown()">
+                <span>Then user should select Hq List Code from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_hqlist_code_in_the_search_box_of_contract_management()">
+                <span>And user should enter the hqlist code in the search box of contract management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_search_button_of_contract_management()">
+                <span>And user should click on search button of contract management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_eye_button_to_view_the_details_of_hq_list_code()">
+                <span>And user should click on eye button to view the details of hq list code</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_Create_project_of_Contract_Management()">
+                <span>Then user should click on Create project of Contract Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_client_contract_management_project()">
+                <span>Then user should select client contract management project of contract management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_continue_button_to_create_a_maintaiance_project()">
+                <span>Then user should click on continue button to create a maintaiance project</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_Click_on_button_beside_All_to_add_everything_in_Service_Type()">
+                <span>And user should Click on button beside All to add everything in Service Type</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_Choice90_in_Service_Type()">
+                <span>And user should select Choice90 in Service Type</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_copy_button_beside_All_to_add_everything_in_client_rate()">
+                <span>And user should click on copy button beside All to add everything in client rate</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_select_choice90_as_service_type_in_client_rate()">
+                <span>And user select choice90 as service type in client rate</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_delete_the_start_date_and_enter_todays_date_in_client_contract_rate()">
+                <span>And user should delete the start date and enter todays date in client contract rate</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_delete_the_end_date_and_enter_any_date_except_todays_date_in_client_contract_rate()">
+                <span>And user should delete the end date and enter any date except todays date in client contract rate</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_Save_Progress_button_in_contract_management_maintenance_Project()">
+                <span>And user should click on Save Progress button in contract management maintenance Project</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_send_to_contract_QA_in_client_contract_manageent_maintenance_project()">
+                <span>When user clicks on send to contract QA in client contract manageent maintenance project</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_Conract_QA_in_Contract_Management()">
+                <span>Then user clicks on Conract QA in Contract Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_the_pencil_icon_of_created_project_in_contract_QA()">
+                <span>And user clicks on the pencil icon of created project in contract QA</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_send_back_to_Contract_Analyst_button()">
+                <span>And user clicks on send back to Contract Analyst button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_contract_analyst_on_the_main_page()">
+                <span>And user clicks on contract analyst on the main page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_edit_icon_of_the_sent_project_on_contract_analyst()">
+                <span>And user clicks on edit icon of the sent project on contract analyst</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_withdraw_button_inside_maintainance_project_creation()">
+                <span>And user should click on withdraw button inside maintainance project creation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_comment_to_withdraw_the_client_contract_maintaiance_project()">
+                <span>And user should enter the comment to withdraw the client contract maintaiance project</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_ok_to_withdraw_the_client_contract_project_from_creation()">
+                <span>And user should click on ok to withdraw the client contract project from creation</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="133"><span class="badge log pass-bg mr-2">Pass</span>Availability of All Modules under Rate Management and project creation of Pharmacy List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_url_of_ens_home()">
+                <span>Given user Enters URL of ENS Home</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_username()">
+                <span>When user enters username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enetrs_password()">
+                <span>And user enetrs password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_should_see_as_page_header_for_ens(java.lang.String)">
+                <span>Then user should see "ENS - QA-CP5" as page header for ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_gets_the_fields_of_home_page_in_ens()">
+                <span>And user gets the fields of Home Page in ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_rate_management_module_button()">
+                <span>When user should click on Rate management module button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_get_the_fields_of_rate_management(io.cucumber.datatable.DataTable)">
+                <span>Then user should get the fields of Rate management</span>
+      <div><table class='markup-table table '><tr><td>Queues</td></tr><tr><td>Maintenance</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_queues_of_rate_management()">
+                <span>And user clicks on Queues of Rate management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_get_the_fields_under_queues_of_rate_management(io.cucumber.datatable.DataTable)">
+                <span>And user should get the fields under Queues of Rate management</span>
+      <div><table class='markup-table table '><tr><td>My Tasks</td></tr><tr><td>Pricing Analyst</td></tr><tr><td>Pricing Analyst Approver</td></tr><tr><td>Configuration Analyst</td></tr><tr><td>Configuration QA</td></tr><tr><td>Pha Relations Manager</td></tr><tr><td>Pha Relations Manager QA</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_maintenance_of_rate_management()">
+                <span>And user clicks on Maintenance of Rate management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_get_the_fields_under_maintenance_of_rate_management(io.cucumber.datatable.DataTable)">
+                <span>And user should get the fields under maintenance of Rate management</span>
+      <div><table class='markup-table table '><tr><td>Manage CNP</td></tr><tr><td>Manage Building Block</td></tr><tr><td>Manage Pharmacy List</td></tr><tr><td>Mass Links Update</td></tr><tr><td>Mass BB Deploy</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_manage_pharmacy_list_of_rate_management()">
+                <span>And user should click on Manage Pharmacy List of Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_pharmacy_list_name_as_and_then_click_outside_while_creating_pharmacy_list_in_rate_managament(java.lang.String)">
+                <span>And user should enter Pharmacy List Name as "ENSTEST" and then click outside while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_entered_project_description_as_while_creating_pharmacy_list_in_rate_managament(java.lang.String)">
+                <span>And user entered project description as "Test Creation Of Pharmacy List In Rate Management" while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicked_on_create_project_while_creating_pharmacy_list_in_rate_managament()">
+                <span>And user clicked on Create Project while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_entered_as_career_hq_code_while_creating_pharmacy_list_in_rate_managament(java.lang.String)">
+                <span>And user entered "MED01" as career HQ Code while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_entered_nabp_no_as_while_creating_pharmacy_list_in_rate_managament_and_click_out_side(java.lang.Integer)">
+                <span>And user entered NABP No as 243  while creating Pharmacy List in Rate Managament and click out side</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_add_button_for_the_nabp_to_be_added_and_copy_the_data_for_verification()">
+                <span>And user should click on Add button for the NABP to be added and copy the data for verification</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_click_on_send_to_configuration_qa_button_while_creating_pharmacy_list_in_rate_managament()">
+                <span>And user should click on click on send to configuration QA button while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_configuration_qa_while_creating_pharmacy_list_in_rate_managament()">
+                <span>When user should click on configuration QA while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_the_created_the_project_while_creating_pharmacy_list_in_rate_managament()">
+                <span>Then user should click on the created the project while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_verify_the_data_with_the_created_data_while_creating_pharmacy_list_in_rate_managament()">
+                <span>And user should verify the data with the created data while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_send_back_to_configuration_analyst_while_creating_pharmacy_list_in_rate_managament()">
+                <span>And user should click on send back to configuration analyst while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_Configuration_Analyst_button_while_creating_Pharmacy_List_in_Rate_Managament()">
+                <span>Then user should click on Configuration Analyst button while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_search_the_created_project_and_click_on_it_while_creating_pharmacy_list_in_rate_managament()">
+                <span>And user should search the created project and click on it while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_withdraw_button_while_creating_pharmacy_list_in_rate_managament()">
+                <span>And user should click on withdraw button while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_comments_while_creating_pharmacy_list_in_rate_managament()">
+                <span>And user should enter the comments while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_ok_while_creating_pharmacy_list_in_rate_managament()">
+                <span>And user should click on ok while creating Pharmacy List in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="168"><span class="badge log pass-bg mr-2">Pass</span>Availability of All Modules under Rate Management and project creation of Building Blocks</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_url_of_ens_home()">
+                <span>Given user Enters URL of ENS Home</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_username()">
+                <span>When user enters username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enetrs_password()">
+                <span>And user enetrs password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_should_see_as_page_header_for_ens(java.lang.String)">
+                <span>Then user should see "ENS - QA-CP5" as page header for ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_rate_management_module_button()">
+                <span>When user should click on Rate management module button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_queues_of_rate_management()">
+                <span>Then user clicks on Queues of Rate management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_maintenance_of_rate_management()">
+                <span>And user clicks on Maintenance of Rate management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_manage_building_block_of_rate_management()">
+                <span>And user should click on Manage Building Block of Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_description_text_box_as_while_creating_bb_in_rate_managament(java.lang.String)">
+                <span>And user should enter description text box as "Automation of Creation of BB" while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_create_project_while_creating_bb_in_rate_managament()">
+                <span>And user should click on Create Project while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_building_block_name_as_while_creating_bb_in_rate_managament(java.lang.String)">
+                <span>And user should enter the Building Block Name as "ENSSMOKETEST" while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_r_from_the_services_dropdown_while_creating_bb_in_rate_managament()">
+                <span>And user should select R from the services dropdown while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_abb_from_the_abb_cbb_drop_down_while_creating_bb_in_rate_managament()">
+                <span>And user should select ABB from the ABB/CBB drop down while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_building_block_type_as_aggregate_while_creating_bb_in_rate_managament()">
+                <span>And user should select Building Block Type as Aggregate while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_lob_as_commercial_while_creating_bb_in_rate_managament()">
+                <span>And user should select LOB as Commercial while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_pharmacy_type_as_ncpdp_while_creating_bb_in_rate_managament()">
+                <span>And user should select Pharmacy Type as NCPDP while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_in_pharmacy_identifier_while_creating_bb_in_rate_managament_and_click_outside(java.lang.Integer)">
+                <span>And user should enter 243 in pharmacy identifier while creating BB in Rate Managament and click outside</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_add_button_in_action_while_creating_bb_in_rate_managament()">
+                <span>Then user should click on add button in action while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_check_the_for_the_correct_data_is_saved_or_not_in_while_creating_bb_rate_managament()">
+                <span>Then user should check the for the correct data is saved or not in while creating BB Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_send_to_pricing_approver_button_while_creating_bb_in_rate_managament()">
+                <span>And user should click on send to pricing Approver button while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_pricing_analyst_approver_button_while_creating_bb_in_rate_managament()">
+                <span>And user should click on Pricing Analyst Approver button while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_project_description_in_pricing_analyst_approver_and_click_on_the_edit_icon_of_created_proejct_while_creating_bb_in_rate_managament()">
+                <span>And user should enter the project description in Pricing Analyst Approver  and click on the edit icon of created proejct while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_send_back_to_pricing_analyst_button_while_creating_bb_in_rate_managament()">
+                <span>And user should click on Send Back to Pricing Analyst button while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_pricing_analyst_button_while_creating_bb_in_rate_managament()">
+                <span>And user should click on Pricing Analyst button while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_project_description_in_pricing_analyst_and_click_on_the_eidt_icon_of_created_project_while_creating_bb_in_rate_managament()">
+                <span>And user should enter the project description in Pricing Analyst and click on the eidt icon of created project while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_withdraw_button_of_project_while_creating_bb_in_rate_managament()">
+                <span>And user should click on withdraw button of project while creating BB in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_comment_as_whiling_withdraing_the_bb_creation_project_in_rate_managament(java.lang.String)">
+                <span>And user should enter the comment as "Withdrawing the created BB Creation Project" whiling withdraing the BB Creation project in Rate Managament</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_ok_whiling_withdraing_the_bb_creation_project()">
+                <span>And user should click on Ok whiling withdraing the BB Creation project</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="203"><span class="badge log pass-bg mr-2">Pass</span>Availability of All Modules under Rate Management and project creation of CNP</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_url_of_ens_home()">
+                <span>Given user Enters URL of ENS Home</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enters_username()">
+                <span>When user enters username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_enetrs_password()">
+                <span>And user enetrs password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_should_see_as_page_header_for_ens(java.lang.String)">
+                <span>Then user should see "ENS - QA-CP5" as page header for ENS</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_rate_management_module_button()">
+                <span>When user should click on Rate management module button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_queues_of_rate_management()">
+                <span>Then user clicks on Queues of Rate management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_maintenance_of_rate_management()">
+                <span>And user clicks on Maintenance of Rate management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_Manage_CNP_of_Rate_Management()">
+                <span>And user should click on Manage CNP of Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_hq_list_whie_creating_cnp_project_in_rate_management()">
+                <span>And user should select HQ List whie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_enter_ProjectName_Into_Search_Box_CNp_Creation_in_RMC(java.lang.String)">
+                <span>And user should enter "ENSTEST" as Project Name while creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_search_button_while_creating_cnp_project_in_rate_management()">
+                <span>And user should click on search button while creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_eye_button_after_clicking_on_search_button_while_creating_cnp_project_in_rate_management()">
+                <span>And user should click on eye button after clicking on search button while creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_create_project_button_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should click on create project button whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_service_type_as_retail_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should select service type as retail whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_into_comment_box_as_whlie_creating_cnp_project_in_rate_management(java.lang.String)">
+                <span>And user should enter into description box as "Testing Creating CNP Maintenance Project" whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_continue_button_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should click on continue button whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_in_brand_discount_under_client_rate_while_creating_CNP_peoject_in_Rate_Management(java.lang.Integer)">
+                <span>And user should enter 2 in brand discount under client rate whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_in_brand_fill_under_client_rate_while_creating_CNP_peoject_in_Rate_Management(java.lang.Integer)">
+                <span>And user should enter 2 in Brand Fill under client rate whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_in_generic_discount_under_client_rate_while_creating_CNP_peoject_in_Rate_Management(java.lang.Integer)">
+                <span>And user should enter 2 in Generic Discount under Client rate whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_in_generic_fee_under_client_rate_while_creating_CNP_peoject_in_Rate_Management(java.lang.Integer)">
+                <span>And user should enter 2 in Generic Fee under cilent rate whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_in_brand_price_code_under_client_rate_while_creating_CNP_peoject_in_Rate_Management(java.lang.String)">
+                <span>And user should enter "MMC3" as price code under client rate whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_clickon_save_progress_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should click on save progress whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_the_bb_type_as_aggregate_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should select the BB Type as Aggregate whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_select_any_bb_name_from_the_dropdown_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should select any BB name from the dropdown whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_add_button_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should click on add button whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_as_price_code_whlie_creating_cnp_project_in_rate_management(java.lang.String)">
+                <span>And user should enter "MMC3" as price code whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_clickon_save_progress_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should click on save progress whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_send_to_pricing_approver_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should click on send to pricing approver whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_pricing_anaylyst_approver_whlie_creating_cnp_project_in_rate_management()">
+                <span>When user clicks on Pricing anaylyst Approver whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_project_descrition_whlie_creating_cnp_project_in_rate_management_in_pricing_analyst_approver()">
+                <span>Then user should enter the project descrition whlie creating CNP Project in Rate Management in Pricing Analyst Approver and click on the pencil icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_send_to_configuration_analyst_button_whlie_creating_cnp_project_in_rate_management()">
+                <span>And user should click on send to configuration analyst button whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_configuration_analyst_whlie_creating_cnp_project_in_rate_management()">
+                <span>When user clicks on Configuration Analyst whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_user_should_enter_the_description_whlie_creating_cnp_project_in_rate_management_in_configuration_analyst()">
+                <span>Then user user should enter the description whlie creating CNP Project in Rate Management in Configuration Analyst  and click on the pencil icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_prioriy_as_whlie_creating_cnp_project_in_rate_management_in_configuration_analyst(java.lang.Integer)">
+                <span>And user should enter the prioriy as 1 whlie creating CNP Project in Rate Management in Configuration Analyst</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_expand_the_aggregate_section_and_add_the_network_code_as_whlie_creating_cnp_project_in_rate_management_in_configuration_analyst(java.lang.String)">
+                <span>And user should expand the aggregate section and add the Network code as "TESTQA" whlie creating CNP Project in Rate Management  in Configuration Analyst</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_Add_netwrok_after_entering_valid_network_code_whike_creating_cnp_project_in_Rate_management_in_config_analyst()">
+                <span>And user should click on Add Network code after entring valid network code whlie creating CNP Project in Rate Management  in Configuration Analyst</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_send_to_configuration_QA_while_crating_CNP_Project_In_Rate_Management_In_Confih_Analyst()">
+                <span>And user should click on send to configuration QA whlie creating CNP Project in Rate Management in Configuration Analyst</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_config_qa_button_while_creating_CNP_project_in_Rate_management_in_config_analyst()">
+                <span>When user clicks on configuration QA button whlie creating CNP Project in Rate Management in Configuration Analyst</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_the_decripton_while_creating_CNP_Project_in_Rate_Management_in_Configuration_QA_and_click_on_the_pencil_icon()">
+                <span>Then user should enter the decripton while creating CNP Project in Rate Management in Configuration QA and click on the pencil icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_send_to_config_analyst_in_confg_QA_while_creating_CNP_Project_in_Rate_Management()">
+                <span>And user should click on send to configuration analyst in config QA whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_clicks_on_configuration_analyst_whlie_creating_cnp_project_in_rate_management()">
+                <span>When user clicks on Configuration Analyst whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_user_should_enter_the_description_whlie_creating_cnp_project_in_rate_management_in_configuration_analyst()">
+                <span>Then user user should enter the description whlie creating CNP Project in Rate Management in Configuration Analyst  and click on the pencil icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_withdraw_button_while_creating_CNP_Project_in_Rate_Management()">
+                <span>And user should click on withdraw button whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_enter_withdrawal_comment_while_creating_CNP_Project_in_Rate_Management(java.lang.String)">
+                <span>And user should enter withdrwal comment as "Withdrawing the CNP Creation Project" whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ENSSmokeTestSteps.user_should_click_on_ok_after_entering_the_withdrawal_comment_while_creating_CNP_project_in_rate_management()">
+                <span>And user should click on ok after entering the withdrawal comment whlie creating CNP Project in Rate Management</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">9</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@ENSAffiliationSmokeTest</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ENSAffiliationSmokeTest</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:47:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Visibility of All Modules under ENS and Pharm Add in Affiliation</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Visibility of All Modules under ENS and Pharm Add in Affiliation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:50:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>Pharm Term in Affiliation</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Pharm Term in Affiliation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@ENSContractManagementSmokeTest</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ENSContractManagementSmokeTest</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='90'>Availability of All Modules under Contract Management and project creation in Contract Management</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Contract Management and project creation in Contract Management</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@RateManagementSmoke</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@RateManagementSmoke</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:55:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='133'>Availability of All Modules under Rate Management and project creation of Pharmacy List</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of Pharmacy List</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:57:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='168'>Availability of All Modules under Rate Management and project creation of Building Blocks</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of Building Blocks</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:59:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='203'>Availability of All Modules under Rate Management and project creation of CNP</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of CNP</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@AffiliationPharmTerm</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AffiliationPharmTerm</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:50:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>Pharm Term in Affiliation</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Pharm Term in Affiliation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@BBCreation</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@BBCreation</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:57:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='168'>Availability of All Modules under Rate Management and project creation of Building Blocks</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of Building Blocks</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@RateManagamentPharmacyListCreation</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@RateManagamentPharmacyListCreation</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:55:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='133'>Availability of All Modules under Rate Management and project creation of Pharmacy List</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of Pharmacy List</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@CNPCreation</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@CNPCreation</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:59:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='203'>Availability of All Modules under Rate Management and project creation of CNP</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of CNP</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+</span>
+<p class="name">@ENSSmokeTest</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ENSSmokeTest</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:47:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Visibility of All Modules under ENS and Pharm Add in Affiliation</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Visibility of All Modules under ENS and Pharm Add in Affiliation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:50:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>Pharm Term in Affiliation</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Pharm Term in Affiliation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='90'>Availability of All Modules under Contract Management and project creation in Contract Management</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Contract Management and project creation in Contract Management</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:55:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='133'>Availability of All Modules under Rate Management and project creation of Pharmacy List</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of Pharmacy List</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:57:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='168'>Availability of All Modules under Rate Management and project creation of Building Blocks</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of Building Blocks</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:59:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='203'>Availability of All Modules under Rate Management and project creation of CNP</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Availability of All Modules under Rate Management and project creation of CNP</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@AffiliationPharmAdd</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AffiliationPharmAdd</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:47:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Visibility of All Modules under ENS and Pharm Add in Affiliation</a>
+<div class="">
+<span class="badge badge-default">ENS HOME Page Smoke Testing Features.Visibility of All Modules under ENS and Pharm Add in Affiliation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
