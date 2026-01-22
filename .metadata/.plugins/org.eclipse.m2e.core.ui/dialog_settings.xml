@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\TalentHub_Automation_BDD"/>
+			<item value="C:\MI_BDD_Ex"/>
 			<item value="C:\MI_BDD"/>
 			<item value="D:\MY_WORK_SPACE\PSM_BDD"/>
 		</list>

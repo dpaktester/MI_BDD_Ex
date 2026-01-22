@@ -1,13 +1,15 @@
 package factory;
 
+import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import utilities.ConfigReader;
 
@@ -20,35 +22,65 @@ public class DriverFactory {
      * Initializes a new WebDriver instance if not present or if previous session is closed.
      */
     public static WebDriver init_Driver() {
-        if (!isDriverActive()) { // ✅ Check if driver is usable
-            ConfigReader configReader = new ConfigReader();
-            prop = configReader.init_prop();
+        try {
+            if (!isDriverActive()) {
+                // Load config
+                ConfigReader configReader = new ConfigReader();
+                prop = configReader.init_prop();
 
-            String browser = prop.getProperty("browser", "chrome").toLowerCase();
-            System.out.println("Browser value from config: " + browser);
+                String browser = prop.getProperty("browser", "chrome").toLowerCase();
+                String zoom = prop.getProperty("zoom", "0.8"); // default 80%
 
-            try {
+                System.out.println("Browser value from config: " + browser);
+                System.out.println("Zoom level from config: " + zoom);
+
                 switch (browser) {
                     case "chrome":
                         WebDriverManager.chromedriver().setup();
-                        tlDriver.set(new ChromeDriver());
+
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.addArguments("--start-maximized");
+
+                        tlDriver.set(new ChromeDriver(chromeOptions));
                         break;
+
                     case "firefox":
                         WebDriverManager.firefoxdriver().setup();
                         tlDriver.set(new FirefoxDriver());
+                        tlDriver.get().manage().window().maximize();
                         break;
+
                     default:
                         throw new RuntimeException("Invalid browser in config.properties: " + browser);
                 }
 
-                getDriver().manage().deleteAllCookies();
-                getDriver().manage().window().maximize();
-                getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                WebDriver driver = getDriver();
 
-            } catch (WebDriverException e) {
-                throw new RuntimeException("Failed to create WebDriver session for browser: " + browser, e);
+                // Common setup
+                driver.manage().deleteAllCookies();
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+                driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(15));
+
+                // Apply page zoom using JavaScript
+                try {
+                    ((JavascriptExecutor) driver)
+                            .executeScript("document.body.style.zoom='" + zoom + "'");
+                    System.out.println("✅ Browser zoom set to " + (Double.parseDouble(zoom) * 100) + "%");
+                } catch (Exception e) {
+                    System.err.println("⚠️ Failed to set zoom: " + e.getMessage());
+                }
             }
+        } catch (WebDriverException e) {
+            System.err.println("WebDriverException while initializing driver: " + e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException("Failed to create WebDriver session", e);
+        } catch (Exception e) {
+            System.err.println("Unexpected exception while initializing driver: " + e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException("Failed to create WebDriver session due to unexpected error", e);
         }
+
         return getDriver();
     }
 
@@ -68,7 +100,7 @@ public class DriverFactory {
             try {
                 driver.quit();
             } catch (Exception e) {
-                System.out.println("Error while quitting driver: " + e.getMessage());
+                System.err.println("Error while quitting driver: " + e.getMessage());
             }
             tlDriver.remove();
         }

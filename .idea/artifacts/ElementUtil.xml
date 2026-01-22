@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ElementUtil">
+    <output-path>$PROJECT_DIR$/out/artifacts/ElementUtil</output-path>
+    <root id="archive" name="ElementUtil.jar">
+      <element id="library" level="project" name="Maven: tech.grasshopper:table-layout:1.5.1" />
+      <element id="file-copy" path="$PROJECT_DIR$/../MI_BDD_Ex/src/main/java/utilities/ElementUtil.java" />
+    </root>
+  </artifact>
+</component>

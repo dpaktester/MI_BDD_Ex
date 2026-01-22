@@ -7,7 +7,7 @@ displayDetailed: true
 displayExpanded: true
 
 dashboardConfig:
-  title: "Automation PDF Report"
+  title: "Talent Hub Automation PDF Report"
   titleColor: "#000000"
   dateColor: "#000000"
   timeColor: "#000000"

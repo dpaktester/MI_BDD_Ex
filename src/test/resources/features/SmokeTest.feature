@@ -17,18 +17,48 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-Feature: Access Playground section on WishInfinite website
-
+Feature: TalentHub Login Functionality
+  As a registered TalentHub user
+  I want to login with valid credentials
+  So that I can access the application
   Background:
     Given I open the browser
     And I navigate to url
-@SmokeTest
-  Scenario: Verify Playground section is visible
-    Then I should see the Playground section visible
-@Test
-  Scenario: Verify page title contains WishInfinite
-    Then The page title should contain "WishInfinite"
-@SmokeTest    
-  Scenario: Verify user enters text to the input Box
-    Then User clicks on playground button
-  	Then User enters "Deepak" to text box 
+  @SmokeTest1
+  Scenario: Successful login to TalentHub
+    When User clicks on Login to App button
+    And User enters username "dmahapatra@businessonetech.com"
+    And User clicks on Next button
+    And User enters password "Sambhuni@25"
+    And User clicks on Sign In button
+    And User clicks on Yes button
+    Then User should be successfully logged in
+  @SmokeTest
+  Scenario: Successful Addition of New Candidate
+    When User clicks on Login to App button
+    And User enters username "dmahapatra@businessonetech.com"
+    And User clicks on Next button
+    And User enters password "Sambhuni@25"
+    And User clicks on Sign In button
+    And User clicks on Yes button
+    Then User Clicks on Candidate Menu Button
+    And User Clicks on Create Candidate Button
+    And User Clicks on Select File button and uploads the profile in pdf format
+    And User Selects the Value from Location dropdown
+    And User Selects the Value from profile source dropdown
+    And User enters jobId
+    And User Clicks on Create Candidate Button Inside
+
+##Feature: TalentHub Upload Resume one by one within the folder Functionality
+  @SmokeTest2
+  Scenario: Successful Addition of New Candidate
+    When User clicks on Login to App button
+    And User enters username "dmahapatra@businessonetech.com"
+    And User clicks on Next button
+    And User enters password "Sambhuni@25"
+    And User clicks on Sign In button
+    And User clicks on Yes button
+    Then User Clicks on Candidate Menu Button
+    And User Clicks on Create Candidate Button
+    And User uploads profiles with jobname
+

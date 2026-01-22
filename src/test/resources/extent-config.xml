@@ -17,10 +17,10 @@
 
 		<protocol>http</protocol>
 		<!-- title of the document -->
-		<documentTitle>AUTOMATION REPORT</documentTitle>
+		<documentTitle>TALENT HUB AUTOMATION REPORT</documentTitle>
 		<!-- report name - displayed at top-nav -->
 
-		<reportName>Automation Report</reportName>
+		<reportName>TALENT HUB AUTOMATION REPORT</reportName>
 		<!-- location of charts in the test view -->
 
 		<!-- top, bottom -->

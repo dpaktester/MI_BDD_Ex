@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(tags = "@SmokeTest", features = { "src/test/resources/features/SmokeTest.feature" }, glue = { "stepdefinitions",
+@CucumberOptions(tags = "@SmokeTest2", features = { "src/test/resources/features/SmokeTest.feature" }, glue = { "stepdefinitions",
 		"applicationhooks" }, plugin = { "pretty",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "timeline:test-output-thread/" }, dryRun = false, monochrome = true, 
 		publish = true)
